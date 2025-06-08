@@ -185,7 +185,7 @@
             of orientation-aligned 3D object generation: producing 3D objects from single
             images with consistent orientations across categories. To facilitate this, we construct
             <b>Objaverse-OA</b>, a dataset of 14,832 orientation-aligned 3D models spanning
-            1,008 categories. Leveraging Objaverse-OA, we fine-tune two representative 3D
+            <b>1,008 categories</b>. Leveraging Objaverse-OA, we fine-tune two representative 3D
             generative models based on multi-view diffusion and 3D variational autoencoder
             frameworks to produce aligned objects that generalize well to unseen objects across
             various categories. Experimental results demonstrate the superiority of our method
@@ -202,7 +202,6 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
         <h2 class="title is-3">Objaverse-OA Dataset</h2>
-        <h3 class="title is-4">Pipeline</h3>
         <img id="pipeline" width="100%" src="./images/dataset.png" alt="Teaser image demonstrating Marigold depth estimation."/>
         <p>
           We employ VLM pre-processing and manual correction to curate our Objaverse-OA dataset, striking a balance between efficiency and accuracy. We show the error rate of VLM’s estimation across different categories above. We
