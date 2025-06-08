@@ -253,7 +253,41 @@
     </div>
     <!-- Orientation-Aligned 3D Generation. -->
     
-    
+    <!-- Zero-shot Orientation Estimation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Orientation-Aligned 3D Generation <br>
+        Based on Two Representative Frameworks</h2>
+        <h3 class="title is-4">Pipeline</h3>
+        <img id="pipeline" width="100%" src="./images/pipeline2.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <p>
+          Our zero-shot model-free orientation estimation method includes three stages: 3D generation, pose refinement, and pose selection. Our orientation-aligned 3D object acts as a template for pose estimation by rendering it from multiple views, refining each, and selecting the best-matching
+          viewpoint. Note that we do not perform training for this downstream task, where the pose refinement
+          module is directly from FoundationPose, and the pose selection module directly utilizes the pre-trained DINO feature extractor.
+        </p>
+<!--         <br>
+        <h3 class="title is-4">Comparison to Baselines</h3>
+        <img id="quan_1" width="60%" src="./images/trellis_quantitative.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <img id="quan_2" width="60%" src="./images/wonder3d_quantitative.png" alt="Teaser image demonstrating Marigold depth estimation."/> -->
+
+        <br>
+        <h3 class="title is-4">More Qualitative Results</h3>
+        <video id="teaser" autoplay muted controls loop playsinline height="100%">
+          <source src="./videos/more_result1.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="more_2" autoplay muted controls loop playsinline height="100%">
+          <source src="./videos/more_result2.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="more_2" autoplay muted controls loop playsinline height="100%">
+          <source src="./videos/more_result3.mp4"
+                  type="video/mp4">
+        </video>
+        
+      </div>
+    </div>
+    <!-- Zero-shot Orientation Estimation. -->
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
