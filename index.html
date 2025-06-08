@@ -199,13 +199,37 @@
     </div>
     <!--/ Abstract. -->
 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Objaverse-OA Dataset</h2>
+        <h3 class="title is-4">Pipeline</h3>
+        <img id="pipeline" width="100%" src="./images/dataset.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <p>
+          We employ VLM pre-processing and manual correction to curate our Objaverse-OA dataset, striking a balance between efficiency and accuracy. We show the error rate of VLM’s estimation across different categories above. We
+          observe that (1) the VLM demonstrates particular difficulty in recognizing front-facing
+          orientations for stick-like objects, and (2) a significant portion of recognition errors occur when
+          processing objects with inherently ambiguous or unclear frontal views. These challenges highlight the necessity
+          of our manual curation.
+        </p>
+      </div>
+    </div>
+    
+
     <!-- Demo video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
         <h2 class="title is-3">Orientation-Aligned 3D Generation <br>
-        Based on 3D-VAE (Trellis-OA) and Multi-view Diffusion (Wonder3D-OA) Frameworks</h2>
+        Based on Two Representative Frameworks</h2>
         <h3 class="title is-4">Pipeline</h3>
         <img id="pipeline" width="100%" src="./images/pipeline1.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <p>
+          We fine-tune two representative methods: Trellis,
+          based on a 3D-VAE backbone (top), and Wonder3D, based on a multi-view diffusion backbone
+          (bottom). For the 3D-VAE, we find that fine-tuning only the sparse structure generator is sufficient
+          to produce orientation-aligned objects. For the multi-view diffusion model, we adopt LoRA as a
+          lightweight domain adapter to enable the generation of orientation-aligned target images.
+        </p>
+        
         <video id="teaser" autoplay muted controls loop playsinline height="100%">
           <source src="./videos/trellis_oa_comp.mp4"
                   type="video/mp4">
