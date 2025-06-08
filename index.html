@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Holistic Urban 3D Scene Understanding via Gaussian Splatting">
+        content="Orientation Matters: Making 3D Generative Models Orientation-Aligned">
   <meta name="keywords" content="holistic, urban, understanding, gaussian, reconstruction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>UrbanCAD: Towards Highly Controllable and Photorealistic 3D Vehicles for Urban Scene Simulation</title>
+  <title>Orientation Matters: Making 3D Generative Models Orientation-Aligned</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FWSVCGZTG"></script>
@@ -62,19 +62,24 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">UrbanCAD: Towards Highly Controllable and Photorealistic 
-    3D Vehicles for Urban Scene Simulation</h1>
-          <h3 class="title is-3">CVPR 2025</h3>
+          <h1 class="title is-1 publication-title">Orientation Matters: Making 3D Generative Models Orientation-Aligned</h1>
+          <h3 class="title is-3">Arxiv 2025</h3>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://yichonglu.github.io">Yichong Lu</a><sup>1*</sup>,</span>
+              <a href="https://yichonglu.github.io">Yichong Lu</a><sup>1,2*</sup>,</span>
             <span class="author-block">
-              Yichi Cai</a><sup>1*</sup>,</span>
+              Yuzhuo Tian</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://zhanghe3z.github.io/">Shangzhan Zhang</a><sup>1</sup>,
+              Zijin Jiang</a><sup>1*</sup>,
             </span>
             <span class="author-block">
-              <a href="https://github.com/hyzhou404">Hongyu Zhou</a><sup>1</sup>,
+              Yikun Zhao</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Yuanbo Yang</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ken-ouyang.github.io/">Hao Ouyang</a><sup>2</sup>,
             </span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=kFnuXyAAAAAJ&hl=zh-TW">Haoji Hu</a><sup>1</sup>,
@@ -83,7 +88,7 @@
              Huimin Yu</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.cvlibs.ne/">Andreas Geiger</a><sup>2,3</sup>
+              <a href="https://shenyujun.github.io/">Yujun Shen</a><sup>2</sup>
             </span>
             <span class="author-block">
               <a href="https://yiyiliao.github.io">Yiyi Liao</a><sup>1</sup>
@@ -92,8 +97,7 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Zhejiang University,</span>
-            <span class="author-block"><sup>2</sup>University of Tübingen,</span>
-            <span class="author-block"><sup>3</sup>Tübingen AI Center</span>
+            <span class="author-block"><sup>2</sup>Ant Group</span>
           </div>
 
           <div class="column has-text-centered">
@@ -128,7 +132,7 @@
                 </a>
               </span> -->
               <!-- Code Link. -->
-<!--               <span class="link-block">
+              <span class="link-block">
                 <a href="https://github.com/google/nerfies"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -136,7 +140,7 @@
                   </span>
                   <span>Code</span>
                   </a>
-              </span> -->
+              </span>
               <!-- Dataset Link. -->
 <!--               <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
@@ -171,13 +175,24 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
         <h2 class="title is-3">Overview</h2>
-        <img id="teaser" width="100%" src="./images/teaser.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <img id="teaser" width="100%" src="./images/teaser_final.png" alt="Teaser image demonstrating Marigold depth estimation."/>
         <div class="content has-text-justified">
           <p>
-            We present <span class="methodname">UrbanCAD</span>, a novel pipeline that automatically builds photorealistic and highly controllable digital twins from a single urban image and a large
-            collection of 3D CAD models and handcrafted materials, supporting various editing operations (top). The produced CAD models can be
-            photorealistically inserted into various background scenes and rendered in novel views, synthesizing challenging out-of-distribution (OOD)
-            scenarios with high fidelity for important downstream applications (bottom).
+            Humans intuitively perceive object shape and orientation from a single image,
+            guided by strong priors about canonical poses. However, existing 3D generative
+            models often produce misaligned results due to inconsistent training data, limiting
+            their usability in downstream tasks. To address this gap, we introduce the task
+            of orientation-aligned 3D object generation: producing 3D objects from single
+            images with consistent orientations across categories. To facilitate this, we construct
+            Objaverse-OA, a dataset of 14,832 orientation-aligned 3D models spanning
+            1,008 categories. Leveraging Objaverse-OA, we fine-tune two representative 3D
+            generative models based on multi-view diffusion and 3D variational autoencoder
+            frameworks to produce aligned objects that generalize well to unseen objects across
+            various categories. Experimental results demonstrate the superiority of our method
+            over post-hoc alignment approaches. Furthermore, we showcase downstream applications
+            enabled by our aligned object generation, including zero-shot object
+            orientation estimation via analysis-by-synthesis and efficient arrow-based object
+            manipulation.
           </p>
         </div>
       </div>
