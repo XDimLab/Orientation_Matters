@@ -204,6 +204,7 @@
       <div class="column is-five-fifths">
         <h2 class="title is-3">Objaverse-OA Dataset</h2>
         <img id="pipeline" width="100%" src="./images/dataset.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <div class="content has-text-justified">
         <p>
           We employ VLM pre-processing and manual correction to curate our Objaverse-OA dataset, striking a balance between efficiency and accuracy. We show the error rate of VLM’s estimation across different categories above. We
           observe that (1) the VLM demonstrates particular difficulty in recognizing front-facing
@@ -223,6 +224,7 @@
         <br>
         <h3 class="title is-4">Pipeline</h3>
         <img id="pipeline" width="100%" src="./images/pipeline1.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <div class="content has-text-justified">
         <p>
           We fine-tune two representative methods: Trellis,
           based on a 3D-VAE backbone (top), and Wonder3D, based on a multi-view diffusion backbone
@@ -261,6 +263,7 @@
         <br>
         <h3 class="title is-4">Pipeline</h3>
         <img id="pipeline" width="100%" src="./images/pipeline2.png" alt="Teaser image demonstrating Marigold depth estimation."/>
+        <div class="content has-text-justified">
         <p>
           Our zero-shot model-free orientation estimation method includes three stages: 3D generation, pose refinement, and pose selection. Our orientation-aligned 3D object acts as a template for pose estimation by rendering it from multiple views, refining each, and selecting the best-matching
           viewpoint. Note that we do not perform training for this downstream task, where the pose refinement
@@ -282,6 +285,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
         <h2 class="title is-3">Efficient Arrow-based Object Rotation Manipulation</h2>
+        <div class="content has-text-justified">
         <p>
           It is difficult to manipulate the rotation of 3D models with uncanonical poses in the downstream applications. 
           Based on our generated orientation-aligned 3D models, we design an arrow-based object rotation manipulation operation, which allows users to 
